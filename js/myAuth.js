@@ -9,8 +9,11 @@ function signIn(){
 	var token = result.credential.accessToken;
 	// The signed-in user info.
 	user = result.user;
+	window.location.href = 'menu.html';
 	console.log(user.displayName);
+	//window.location.href = "menu.html";
 	
+	console.log("Inside showMenuPage1");
 	//window.location.href = "menu.html"
 	showMenuPage();
 	// ...
@@ -27,6 +30,9 @@ function signIn(){
 };
 
 function showMenuPage(){
-	window.location.href = "menu.html"
+	//window.location.href = "menu.html"
+	console.log("Inside showMenuPage1");
+	$(location).attr('href', 'menu.html')
+	console.log("Inside showMenuPage1");
 	$("#welcomeText").html("Hello,"+user.displayName);
 }
