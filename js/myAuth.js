@@ -4,19 +4,20 @@ var user;
 //sign in with a pop-up window, call signInWithPopup
 function signIn(){
 	console.log("Entered");
-	firebase.auth().signInWithPopup(provider).then(function(result) {
-	// This gives you a Google Access Token. You can use it to access the Google API.
-	var token = result.credential.accessToken;
-	// The signed-in user info.
-	user = result.user;
-	window.location.href = 'menu.html';
-	console.log(user.displayName);
-	//window.location.href = "menu.html";
+	firebase.auth().signInWithRedirect(provider);
 	
-	console.log("Inside showMenuPage1");
-	//window.location.href = "menu.html"
-	showMenuPage();
-	// ...
+	firebase.auth().getRedirectResult().then(function(result) {
+	  if (result.credential) {
+		// This gives you a Google Access Token. You can use it to access the Google API.
+		var token = result.credential.accessToken;
+		// ...
+		
+		window.location.href = 'menu.html';
+		console.log(user.displayName);
+	//window.location.href = "menu.html";
+	  }
+	  // The signed-in user info.
+	  var user = result.user;
 	}).catch(function(error) {
 	  // Handle Errors here.
 	  var errorCode = error.code;
@@ -27,12 +28,9 @@ function signIn(){
 	  var credential = error.credential;
 	  // ...
 	});
+	
+	
+	
+	
+	
 };
-
-function showMenuPage(){
-	//window.location.href = "menu.html"
-	console.log("Inside showMenuPage1");
-	$(location).attr('href', 'menu.html')
-	console.log("Inside showMenuPage1");
-	$("#welcomeText").html("Hello,"+user.displayName);
-}
