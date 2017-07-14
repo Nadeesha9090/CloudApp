@@ -8,6 +8,37 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	
+	
+	<script>
+	// Enter your key, values and event trigger name here
+	
+		var myKey = "n73ITRoRh7vIEnLpCSjvhtqM8lfjYijLGBleVsv6pGn";
+		var val1 = "webapp";
+		var val2 = "0";
+		var val3 = "123";
+		var trigger = "button_pressed";
+
+		function iftttTweet(){
+		  val1 = document.getElementById("channelcenter").value;
+		  val2 = document.getElementById("message").value;
+		  var url = "https://maker.ifttt.com/trigger/" + trigger +
+			  "/with/key/" + myKey +
+			  "?value1=" + val1 + 
+			  "&value2=" + val2 + 
+			  "&value3=" + val3;
+		  var request = new XMLHttpRequest();
+		  console.log("Inside Function")
+		  request.onreadystatechange = function() {
+			if (request.readyState === 4) {
+			  alert("request got: " + request.responseText);
+			}
+		  };
+		  request.open('GET', url, true);
+		  request.send();
+		}
+	
+	</script>
 </head> 
 
 <body> 
@@ -21,22 +52,22 @@
 
 	<div data-role="content">	
 
-		<form action="process.cfm" method="post">
+		
 
-			<fieldset data-role="fieldcontain"> 
-				<label for="username">Channel Center:</label>
-				<input type="text" name="username" id="username">
-			</fieldset>
+			 
+				<label for="channelcenter">Channel Center:</label>
+				<input type="text" name="channelcenter" id="channelcenter">
+		
 			
-			<fieldset data-role="fieldcontain"> 
-				<label for="username">Message:</label>
+			
+				<label for="message">Message:</label>
 				<textarea type="text" name="message" id="message"></textarea>
-			</fieldset>
+			
 
 
-			<input type="submit" value="Tweet">
+			<input type="submit" value="Tweet" onclick ="return iftttTweet();">
 
-		</form>
+		
 
 	</div>
 	
