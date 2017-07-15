@@ -11,10 +11,38 @@
     
 </head>
 
-	<script type="text/javascript">
+	
+<body>
+<div data-role="page">
+
+	<div data-role="header">
+		<a href="menu.html" data-rel="back">Home</a>
+		<h1>Channel Counter</h1>
+	</div>
+	
+<div class="jquery-script-clear"></div>
+
+
+<div class="container">
+	<form action="" method="post" >
+	
+		<fieldset data-role="fieldcontain"> 
+				<label for="count">Patient No:</label>
+				<input type="text" name="count" id="count">
+		</fieldset>
+		
+		<div style="text-align : center;">
+			<a type="button"  class="btn btn-primary" onClick="return  incrementCount();">
+				<img src="images/add.ico" >				
+			</a>
+		</div>
+		
+	</form>
+</div>
+</div>
+<script type="text/javascript">
 
 	  // if the count variable is undefined, set its value to zero
-	  
 	  var count = 0;
 	  
 
@@ -28,8 +56,7 @@
 	  };
 	  
 	  
-	// Enter your key, values and event trigger name here
-	
+	//  key, values and event trigger name 
 		var myKey = "n73ITRoRh7vIEnLpCSjvhtqM8lfjYijLGBleVsv6pGn";
 		var val1 = "webapp";
 		var val2 = "0";
@@ -45,7 +72,7 @@
 			  "&value2=" + val2 + 
 			  "&value3=" + val3;
 		  var request = new XMLHttpRequest();
-		  console.log("Inside Function")
+		  console.log("Inside iftttTweet() Function")
 		  request.onreadystatechange = function() {
 			if (request.readyState === 4) {
 			  alert("request got: " + request.responseText);
@@ -57,44 +84,6 @@
 	
 	
   </script>
-<body>
-<div data-role="page">
-
-	<div data-role="header">
-		<a href="menu.html" data-rel="back">Home</a>
-		<h1>Channel Counter</h1>
-	</div>
-	
-<div class="jquery-script-clear"></div>
-
-
-<div class="container">
-
-	<!---div class="js-spinner"> <!-- js-spinner is an important scoping class for the input controls. 
-		<input type="number" step="1" max="150" min="0" data-stepper-debounce="400" class="js-stepper form-control">
-		
-			<div style="text-align : center;">
-				<a type="button" spinner-button="up" title="add 1" class="btn btn-primary">
-				<img src="images/add.ico" >
-				</a>
-			</div>
-
-	</div>-->
-	<form action="" method="post" >
-		<fieldset data-role="fieldcontain"> 
-				<label for="count">Patient No:</label>
-				<input type="text" name="count" id="count">
-		</fieldset>
-		
-		<div style="text-align : center;">
-			<a type="button"  class="btn btn-primary" onClick="return  incrementCount();">
-				<img src="images/add.ico" >				
-			</a>
-		</div>
-	</form>
-</div>
-</div>
-
 	
 </body>
 </html>

@@ -9,44 +9,7 @@
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 </head> 
-<!--script>
-	// Enter your key, values and event trigger name here
-	 // function to increment value of count variable
-	  function incrementCount() {
-		count = document.getElementById("count").value
-		count++;
-		document.getElementById("count").value = count;
-		console.log(count);
-		iftttTweet();
-	  };
-	  
-	  
-		var myKey = "n73ITRoRh7vIEnLpCSjvhtqM8lfjYijLGBleVsv6pGn";
-		var val1 = "webapp";
-		var val2 = "0";
-		var val3 = "123";
-		var trigger = "button_pressed";
 
-		function iftttTweet(){
-		  val1 = document.getElementById("channelcenter").value;
-		  val2 = document.getElementById("message").value;
-		  var url = "https://maker.ifttt.com/trigger/" + trigger +
-			  "/with/key/" + myKey +
-			  "?value1=" + val1 + 
-			  "&value2=" + val2 + 
-			  "&value3=" + val3;
-		  var request = new XMLHttpRequest();
-		  console.log("Inside Function")
-		  request.onreadystatechange = function() {
-			if (request.readyState === 4) {
-			  alert("request got: " + request.responseText);
-			}
-		  };
-		  request.open('GET', url, true);
-		  request.send();
-		}
-	
-	</script-->
 <body> 
 
 <div data-role="page">
@@ -65,7 +28,7 @@
 		</ul>
 		<br>
 		<div style="text-align : center;">
-					<img src="images/doctor.png" >
+			<img src="images/doctor.png" >
 		</div>	
 	</div>
 	

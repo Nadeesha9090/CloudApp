@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html>
 
 <head>
@@ -10,8 +10,36 @@
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 	
 	
-	<script>
-	// Enter your key, values and event trigger name here
+	
+</head> 
+
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<a href="menu.html" data-rel="back">Home</a>
+		<h1>Arrival Alert</h1>
+	</div>
+
+	<div data-role="content">	
+			 
+			<label for="channelcenter">Channel Center:</label>
+			<input type="text" name="channelcenter" id="channelcenter">
+			
+			<label for="message">Message:</label>
+			<textarea type="text" name="message" id="message"></textarea>
+
+			<input type="submit" value="Tweet" onclick ="return iftttTweet();">
+
+	</div>
+	
+	<!---div data-role="footer">
+		<h4>Footer content</h4>
+	</div-->
+</div>
+<script>
+	// Key, values and event trigger name here
 	
 		var myKey = "n73ITRoRh7vIEnLpCSjvhtqM8lfjYijLGBleVsv6pGn";
 		var val1 = "webapp";
@@ -39,43 +67,6 @@
 		}
 	
 	</script>
-</head> 
-
-<body> 
-
-<div data-role="page">
-
-	<div data-role="header">
-		<a href="menu.html" data-rel="back">Home</a>
-		<h1>Arrival Alert</h1>
-	</div>
-
-	<div data-role="content">	
-
-		
-
-			 
-				<label for="channelcenter">Channel Center:</label>
-				<input type="text" name="channelcenter" id="channelcenter">
-		
-			
-			
-				<label for="message">Message:</label>
-				<textarea type="text" name="message" id="message"></textarea>
-			
-
-
-			<input type="submit" value="Tweet" onclick ="return iftttTweet();">
-
-		
-
-	</div>
-	
-	<!---div data-role="footer">
-		<h4>Footer content</h4>
-	</div-->
-	
-</div>
 
 </body>
 </html>
