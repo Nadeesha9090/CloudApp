@@ -20,7 +20,19 @@ My solution is based on simple mechanism where patients can get a notification w
 
 #### Patient Notification 
   ![Alt text](https://github.com/Nadeesha9090/CloudApp/blob/master/wiki/2.png)
+  
+  
+### Screenshots of the App
+Here you can find selected screenshots of the App
+#### Figure 1
+ <img src="https://github.com/Nadeesha9090/CloudApp/blob/master/wiki/3.png" width = "300">
+  
+#### Figure 2
+<img src="https://github.com/Nadeesha9090/CloudApp/blob/master/wiki/4.png" width = "300">
 
-
-
+#### Figure 3
+<img src="https://github.com/Nadeesha9090/CloudApp/blob/master/wiki/5.png" width = "300">
+ 
+#### Figure 4
+<img src="https://github.com/Nadeesha9090/CloudApp/blob/master/wiki/6.png" width = "300">
 
